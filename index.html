@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        JAVASCRIPT4.3
+    </title>
+    <style>
+        #slideholder {
+            height: 250px;
+            width: 400px;
+            border: 3px black solid;
+        }
+
+
+        #slideholder2 {
+            height: 250px;
+            width: 400px;
+            border: 3px black solid;
+        } 
+        
+        
+        
+        #slideholder3 {
+            height: 250px;
+            width: 400px;
+            border: 3px black solid;
+        }
+
+        body {
+          background-color: gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div align="center">
+        
+        <div id="slideholder"></div>
+        <div id="slideholder2"></div>
+        <div id="slideholder3"></div>
+    </div>  
+
+
+
+    <script>
+    var plaatjes = [1, 2, 3];
+    var teller = 1;
+    var slideholder = document.getElementById("slideholder");
+    slideholder.style.backgroundImage = "url('Eyes/pic1.jpg')";
+
+    slideholder.addEventListener("click", function() {
+        slideholder.style.backgroundImage = "url('Eyes/pic" + getEyes() + ".jpg')";
+    });
+
+
+
+    function getEyes() {
+        if(teller >= 3) {
+            teller = 1;
+        } else {
+            teller ++;
+        }
+        return teller;
+    }
+
+
+
+
+    var plaatjes2 = [1, 2, 3];
+    var teller2 = 1;
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url('Nose/pic1.jpg')";
+
+    slideholder2.addEventListener("click", function() {
+        slideholder2.style.backgroundImage = "url('Nose/pic" + getNose() + ".jpg')";
+    });
+
+
+
+    function getNose() {
+        if(teller2 >= 3) {
+            teller2 = 1;
+        } else {
+            teller2 ++;
+        }
+        return teller2;
+    }
+
+
+
+    var plaatjes3 = [1, 2, 3];
+    var teller3 = 1;
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url('Mouth/pic1.jpg')";
+
+    slideholder3.addEventListener("click", function() {
+        slideholder3.style.backgroundImage = "url('Mouth/pic" + getMouth() + ".jpg')";
+    });
+
+
+
+    function getMouth() {
+        if(teller3 >= 3) {
+            teller3 = 1;
+        } else {
+            teller3 ++;
+        }
+        return teller3;
+    }
+
+
+
+    </script>
+</body>
+</html>
